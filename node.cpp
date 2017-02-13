@@ -1,4 +1,5 @@
 #include "node.h"
+#include "filelist.h"
 
 Node::Node(QString filepath){
     setSig(0);
@@ -23,6 +24,10 @@ QFileInfo* Node::getNodeInfo(){
     return nodeInfo;
 }
 
+FileList* Node::getDirectoryList(){
+    return directory;
+}
+
 void Node::setSig(Node* s){
     next = s;
 }
@@ -39,4 +44,8 @@ void Node::setNodeInfo(){
     *nodeInfo = dir->entryInfoList().constFirst();
 }
 
+void Node::setDirectoryList(){
+    FileList* list  = new FileList(*dir);
+    directory = list;
+}
 
