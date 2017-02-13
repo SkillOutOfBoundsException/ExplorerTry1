@@ -11,6 +11,12 @@ class FileList
 public:
     FileList(QString path);
     void addNod(Node *n);
+    Node *getHead();
+    Node *getTail();
+    int getCant();
+    void setCant(int value);
+    void setHead(Node* nodo);
+    void setTail(Node* nodo);
 private:
     Node* head;
     Node* tail;
