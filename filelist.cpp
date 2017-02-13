@@ -7,6 +7,27 @@ FileList::FileList(QString path)
     setTail(Nodo1);
     setCant(1);
 }
+
+void FileList::addNod(Node* n)
+{
+    if (head == 0){
+        head = n;
+    }
+    else{
+        Node* tmp = head;
+        while (true)
+        {
+            if (tmp->getSig()==0)
+            {
+                tmp->setSig(n);
+                break;
+            }
+            tmp = tmp->getSig();
+        }
+        tail = tmp;
+    }
+
+}
 void FileList::setHead(Node *nodo){
     head = nodo;
 }
@@ -18,4 +39,5 @@ void FileList::setCant(int value){
 }
 int FileList::getCant(){
     return cant;
+
 }
