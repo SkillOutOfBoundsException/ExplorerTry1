@@ -2,15 +2,15 @@
 
 FileList::FileList(QString path)
 {
-    node *Nodo1 = new Node(path);
+    Node *Nodo1 = new Node(path);
     setHead(Nodo1);
     setTail(Nodo1);
     setCant(1);
 }
-void FileList::setHead(node *nodo){
+void FileList::setHead(Node *nodo){
     head = nodo;
 }
-void FileList::setTail(node * nodo){
+void FileList::setTail(Node * nodo){
     tail = nodo;
 }
 void FileList::setCant(int value){

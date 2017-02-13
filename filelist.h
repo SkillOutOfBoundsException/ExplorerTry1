@@ -10,12 +10,12 @@ class FileList
 {
 public:
     FileList(QString path);
-    node *getHead();
-    node *getTail();
+    Node *getHead();
+    Node *getTail();
     int getCant();
-    void setCant(int);
-    void setHead(node);
-    void setTail(node);
+    void setCant(int value);
+    void setHead(Node* nodo);
+    void setTail(Node* nodo);
 
 private:
     Node* head;
