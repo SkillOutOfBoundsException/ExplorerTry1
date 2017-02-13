@@ -15,6 +15,7 @@ private:
     Node* head;
     Node* tail;
     int cant;
+    QString pathname;
 };
 
 #endif // FILELIST_H

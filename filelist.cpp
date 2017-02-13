@@ -1,22 +1,20 @@
 #include "filelist.h"
-#include "node.h"
 
-FileList::FileList()
+FileList::FileList(QString path)
 {
-
+    pathname = path;
 }
 
 void FileList::addNod(Node* n)
 {
     if (head == 0){
         head = n;
-        return;
     }
     else{
         Node* tmp = head;
         while (true)
         {
-            if (tmp->getSig()==null)
+            if (tmp->getSig()==0)
             {
                 tmp->setSig(n);
                 break;

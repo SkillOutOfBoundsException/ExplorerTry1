@@ -4,7 +4,7 @@
 #include <QString>
 #include <QtGui>
 #include <QDir>
-#include "filelist.h"
+
 
 class Node
 {
@@ -16,6 +16,7 @@ public:
     QFileInfo* getNodeInfo();
     Node* getSig();
     void setSig(Node* s);
+
 
 private:
     Node* next;
